@@ -379,6 +379,10 @@ header .cart svg {
     margin-left: 8px;
     border: 5px solid white;
 }
+.section-2 .adv-img img {
+    width: 100%;
+    height: 480px;
+}
 
 .section-2-container {
     width: 80%;
