@@ -1,0 +1,650 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f6;
+}
+
+:root{
+    --primary-color: #2874f0;
+}
+
+.container {
+    padding: 0 8px;
+}
+
+
+/* header */
+
+header {
+    background-color: var(--primary-color);
+    height: 56px;
+}
+
+header .nav-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+}
+
+header .nav-container .logo {
+    display: flex;
+    min-width: 137px;
+    justify-content: flex-end;
+}
+
+header .nav-container .logo img {
+    width: 75px;
+}
+
+header .search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+header .search  .search-container {
+    width: 540px;
+    height: 36px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    display: flex;
+}
+
+header .search  .search-container input {
+    width: calc(100% - 32px);
+    padding: 16px;
+    outline: none;
+    border: none;
+
+}
+
+header .search  .search-container button {
+    width: 36px;
+    height: 100%;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+    border-radius: 0 2px 2px 0;
+}
+
+header .login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+header .login  button {
+    width: 122px;
+    padding: 5px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+header .become-seller {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .more {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .more svg {
+    margin-left: 8px;
+    rotate: -90deg;
+}
+
+.section-1 .section-1-container .section-1-item svg {
+    justify-content: center;
+    margin-left: 2px;
+} 
+
+  /* Dropdown Home */
+  .dropbtn4 {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 14px;
+    font-style: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown4 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content4 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content4 a {
+    color: black;
+    font-size: 12px;
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content4 a:hover {background-color: whitesmoke;}
+  
+  .dropdown4:hover .dropdown-content4 {display: block;}
+  
+  .dropdown4:hover .dropbtn4 {background-color: none;}
+
+header .cart {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    
+}
+
+header .cart svg {
+    margin-right: 8px;
+}
+
+/* section 1 */
+
+/* Dropdown Electronics */
+.dropbtn {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-style: bold;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: whitesmoke;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: white; color: blue;}
+
+  /* Dropdown Fashion */
+.dropbtn1 {
+    background-color: white;
+    color: black;
+    margin-left: 20px;
+    font-size: 14px;
+    font-style: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content1 a:hover {background-color: whitesmoke;}
+  
+  .dropdown1:hover .dropdown-content1 {display: block;}
+  
+  .dropdown1:hover .dropbtn1 {background-color: white; color: blue;}
+
+  /* Dropdown Beauty, Toy & More */
+.dropbtn2 {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    margin-left: 20px; 
+    font-style: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown2 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content2 a:hover {background-color: whitesmoke;}
+  
+  .dropdown2:hover .dropdown-content2 {display: block;}
+  
+  .dropdown2:hover .dropbtn2 {background-color: white; color: blue;}
+
+  /* Dropdown Home */
+.dropbtn3 {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-style: bold;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  .dropdown3 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content3 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content3 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content3 a:hover {background-color: whitesmoke;}
+  
+  .dropdown3:hover .dropdown-content3 {display: block;}
+  
+  .dropdown3:hover .dropbtn3 {background-color: white; color: blue;}
+
+
+.section-1 {
+    width: 100%;
+    height: 122px;
+    margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+}
+
+.section-1-container {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-1-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-1-item img {
+    width: 64px;
+    height: 64px;
+}
+
+
+/* section 2 */
+
+
+.section-2 {
+    display: flex;
+}
+
+.section-2 .adv-img{
+    width: 20%;
+    height: 485px;
+    margin-left: 8px;
+    border: 5px solid white;
+}
+
+.section-2-container {
+    width: 80%;
+    margin-left: 8px;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.dealsoftheday {
+    display: flex;
+    width: 100%;
+    padding:10px 0px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 16%);
+    justify-content: space-between;
+}
+
+code {
+    font-family: Consolas,"courier new";
+    color: white;
+    padding: 0px;
+    margin-left: -120px;
+    font-size: 205%;
+  }
+
+.deals {
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 8px;
+    font-style: bold;
+}
+
+ .clock {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    font-size: 20px;
+    margin-left: -150px;
+    margin-right: 800px;
+    margin-top: 12px;
+}
+
+.dealsoftheday button {
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 40px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /* align-items: left; */
+}
+
+.section-2-offers {
+    width: 23px;
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: right;
+}
+
+.section-2-offers-viewall {
+    margin-top: 132px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-2-offers-viewall button {
+    margin-top: 24px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.section-2-offers-viewall {
+    margin-top: 132px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.section-2-list {
+    margin-top: 2px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.section-2-item {
+    width: 232px;
+    height: 90%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-2-item img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.section-2-item-head {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-2-item-price {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #388e3c;
+}
+
+.section-2-item-explore {
+    opacity: 0.6;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+/* section 3 */
+.book-list {
+    display: flex;
+    top: 0; right: 0;
+    background-color: white;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-left: 9px;
+    width: 99.56%;
+    padding:10px 0px;
+    justify-content: space-between;
+}
+.books {
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 8px;
+    font-style: bold;
+}
+
+.music .section-3-shopnow{
+    opacity: 0.6;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 12px;
+    margin-left: 30px;
+} 
+
+.book-list button {
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-right: 40px;
+    margin-left: 890px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    align-items: right;
+}
+
+
+.section-3-container {
+    width: 99.58%;
+    margin-left: 8px;
+    height: 362px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.section-3-offers-viewall {
+    margin-top: 132px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-3-offers-viewall button {
+    margin-top: 24px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.section-3-offers-viewall {
+    margin-top: 132px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.section-3-list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.section-3-item {
+    width: 232px;
+    height: 100%;
+    padding: 0 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-item img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.section-3-item-head {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-3-item-price {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #388e3c;
+}
+
+.section-3-item-explore {
+    opacity: 0.6;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 12px;
+}
