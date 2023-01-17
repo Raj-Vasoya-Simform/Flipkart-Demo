@@ -18,43 +18,67 @@
 
     <script>
 
+        var firstproducts = 0;
+
+        function MoveRight(right) {
+
+            firstproducts = firstproducts - right;
+
+            console.log("first product ", firstproducts)
+
+            document.getElementById("im").style.transform = `translateX(${firstproducts}px)`;
+
+        }
+
+        function MoveLeft(left) {
+
+            firstproducts = firstproducts + left;
+
+            document.getElementById("im").style.transform = `translateX(${firstproducts}px)`;
+
+        }
+
         /*Clock Script*/
         // Set the date we're counting down to
-        var countDownDate = new Date("Jan 19, 2023 23:37:25").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-          // Get today's date and time
-          var now = new Date().getTime();
-            
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-            
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-          // Output the result in an element with id="demo"
-          document.getElementById("demo").innerHTML = hours + " : "
-          + minutes + " : " + seconds + "  " + "Left";
-            
-          // If the count down is over, write some text 
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-          }
-        }, 1000);
-        </script>
+        var countDownDate = new Date("Jan 20, 2023 23:37:25").getTime();
 
-        
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = hours + " : "
+                + minutes + " : " + seconds + "  " + "Left";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+
+
+
+    </script>
+
+
     <!-- header -->
     <header>
         <div class="nav-container">
             <div class="logo">
-                <img src="images/FlipkartLogoBg.jpg"
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
                     alt="Flipkart logo">
             </div>
             <div class="search">
@@ -81,14 +105,14 @@
                 Become a Seller
             </div>
             <div class="more">
-                
+
                 <div class="dropdown4">
                     <button class="dropbtn4"><b>More</b></button>
                     <div class="dropdown-content4">
-                      <a href="#">Notification Preferences</a>
-                      <a href="#">24x7 Customer Care</a>
-                      <a href="#">Advertise</a>
-                      <a href="#">Download App</a>
+                        <a href="#">Notification Preferences</a>
+                        <a href="#">24x7 Customer Care</a>
+                        <a href="#">Advertise</a>
+                        <a href="#">Download App</a>
                     </div>
                 </div>
                 <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="zZ3yfL">
@@ -122,20 +146,22 @@
                 <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/6e3e1efa83bc56c3.png?q=100" alt="">
                 <div class="dropdown">
                     <button class="dropbtn"><b>Electronics</b></button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                         <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                     </svg>
                     <div class="dropdown-content">
-                      <a href="#"> Audio </a>
-                      <a href="#"> Cameras & Accessories </a>
-                      <a href="#"> Computer Peripherals </a>
-                      <a href="#"> Gaming </a>
-                      <a href="#"> Health & Personal Care </a>
-                      <a href="#"> Laptop Accessories </a>
-                      <a href="#"> Laptop and Desktop </a>
-                      <a href="#"> Mobile Accessory </a>
-                      <a href="#"> Powerbank </a>
-                      <a href="#"> Tablets </a>
+                        <a href="#"> Audio </a>
+                        <a href="#"> Cameras & Accessories </a>
+                        <a href="#"> Computer Peripherals </a>
+                        <a href="#"> Gaming </a>
+                        <a href="#"> Health & Personal Care </a>
+                        <a href="#"> Laptop Accessories </a>
+                        <a href="#"> Laptop and Desktop </a>
+                        <a href="#"> Mobile Accessory </a>
+                        <a href="#"> Powerbank </a>
+                        <a href="#"> Tablets </a>
                     </div>
                 </div>
             </div>
@@ -147,20 +173,22 @@
                 <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/a11d5d13e54bf964.png?q=100" alt="">
                 <div class="dropdown1">
                     <button class="dropbtn1"><b>Fashion</b></button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> 
-                   </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
                     <div class="dropdown-content1">
-                      <a href="#"> Men's Top wear </a>
-                      <a href="#"> Men's Bottom Wear </a>
-                      <a href="#"> Women Ethnic </a>
-                      <a href="#"> Women Western </a>
-                      <a href="#"> Men Footwear </a>
-                      <a href="#"> Women Footwear </a>
-                      <a href="#"> Watch and Accessories </a>
-                      <a href="#"> Bags, Suitcases & Luggage </a>
-                      <a href="#"> Kids </a>
-                      <a href="#"> Essentials </a>
+                        <a href="#"> Men's Top wear </a>
+                        <a href="#"> Men's Bottom Wear </a>
+                        <a href="#"> Women Ethnic </a>
+                        <a href="#"> Women Western </a>
+                        <a href="#"> Men Footwear </a>
+                        <a href="#"> Women Footwear </a>
+                        <a href="#"> Watch and Accessories </a>
+                        <a href="#"> Bags, Suitcases & Luggage </a>
+                        <a href="#"> Kids </a>
+                        <a href="#"> Essentials </a>
                     </div>
                 </div>
             </div>
@@ -168,20 +196,22 @@
                 <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/5f09b2d254acb48a.png?q=100" alt="">
                 <div class="dropdown2">
                     <button class="dropbtn2"><b>Beauty, Toy & More</b></button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> 
-                   </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
                     <div class="dropdown-content2">
-                      <a href="#"> Beauty & Personal Care </a>
-                      <a href="#"> Men's Grooming </a>
-                      <a href="#"> Food & Drinks </a>
-                      <a href="#"> Nutritions & Health Care </a>
-                      <a href="#"> Baby Care </a>
-                      <a href="#"> Toys & School Supplies </a>
-                      <a href="#"> Sports & Fitness </a>
-                      <a href="#"> Books </a>
-                      <a href="#"> Music </a>
-                      <a href="#"> Stationery & Office Supplies </a>    
+                        <a href="#"> Beauty & Personal Care </a>
+                        <a href="#"> Men's Grooming </a>
+                        <a href="#"> Food & Drinks </a>
+                        <a href="#"> Nutritions & Health Care </a>
+                        <a href="#"> Baby Care </a>
+                        <a href="#"> Toys & School Supplies </a>
+                        <a href="#"> Sports & Fitness </a>
+                        <a href="#"> Books </a>
+                        <a href="#"> Music </a>
+                        <a href="#"> Stationery & Office Supplies </a>
                     </div>
                 </div>
             </div>
@@ -189,20 +219,22 @@
                 <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/5972d5da375c81c7.png?q=100" alt="">
                 <div class="dropdown3">
                     <button class="dropbtn3"><b>Home</b></button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> 
-                   </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
                     <div class="dropdown-content3">
-                      <a href="#"> Home Furnishing </a>
-                      <a href="#"> Furniture Studio </a>
-                      <a href="#"> Living Room Furniture </a>
-                      <a href="#"> Kitchen & Dining </a>
-                      <a href="#"> Bedroom Furniture </a>
-                      <a href="#"> Home Decor </a>
-                      <a href="#"> Tools & Utility </a>
-                      <a href="#"> Work Space Furniture </a>
-                      <a href="#"> Lightings & Electricals </a>
-                      <a href="#"> Space Saving Furniture </a>
+                        <a href="#"> Home Furnishing </a>
+                        <a href="#"> Furniture Studio </a>
+                        <a href="#"> Living Room Furniture </a>
+                        <a href="#"> Kitchen & Dining </a>
+                        <a href="#"> Bedroom Furniture </a>
+                        <a href="#"> Home Decor </a>
+                        <a href="#"> Tools & Utility </a>
+                        <a href="#"> Work Space Furniture </a>
+                        <a href="#"> Lightings & Electricals </a>
+                        <a href="#"> Space Saving Furniture </a>
                     </div>
                 </div>
             </div>
@@ -229,45 +261,52 @@
                 <div id="demo" class="clock"></div>
                 <button>View All</button>
             </div>
-            <div class="section-2-list">
+            <div class="section-2-list" id="im">
                 <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/l1tmf0w0/stuffed-toy/2/c/q/3-feet-printed-foot-teddy-bear-stuffed-toys-latest-teddy-bear-90-original-imagdazpzwhhvkhu.jpeg?q=70" alt="Soft Toy Image">
+                    <img src="https://rukminim1.flixcart.com/image/400/400/l1tmf0w0/stuffed-toy/2/c/q/3-feet-printed-foot-teddy-bear-stuffed-toys-latest-teddy-bear-90-original-imagdazpzwhhvkhu.jpeg?q=70"
+                        alt="Soft Toy Image">
                     <div class="section-2-item-head">Soft Toy</div>
                     <div class="section-2-item-price">Under ₹299</div>
                     <div class="section-2-item-explore">Explore Now</div>
                 </div>
                 <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/kn0n6a80/remote-control-toy/i/t/l/mini-racing-4-channel-radio-control-rc-car-miss-chief-original-imagfs8264ewfmnw.jpeg?q=70" alt="Toy Car Image">
+                    <img src="https://rukminim1.flixcart.com/image/400/400/kn0n6a80/remote-control-toy/i/t/l/mini-racing-4-channel-radio-control-rc-car-miss-chief-original-imagfs8264ewfmnw.jpeg?q=70"
+                        alt="Toy Car Image">
                     <div class="section-2-item-head">Toy Car</div>
                     <div class="section-2-item-price">Under ₹499</div>
                     <div class="section-2-item-explore">Explore Now</div>
                 </div>
                 <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/l51d30w0/television/1/k/j/-original-imagfsyu8nrz5gzg.jpeg?q=70" alt="LED TV Image">
+                    <img src="https://rukminim1.flixcart.com/image/400/400/l51d30w0/television/1/k/j/-original-imagfsyu8nrz5gzg.jpeg?q=70"
+                        alt="LED TV Image">
                     <div class="section-2-item-head">LED TV</div>
                     <div class="section-2-item-price">Under ₹39999</div>
                     <div class="section-2-item-explore">Explore Now</div>
                 </div>
                 <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/khuvxjk0-0/mouse/l/t/6/zeb-transformer-m-zebronics-original-imafxrugfftphbkk.jpeg?q=70" alt="Mouse Image">
+                    <img src="https://rukminim1.flixcart.com/image/400/400/khuvxjk0-0/mouse/l/t/6/zeb-transformer-m-zebronics-original-imafxrugfftphbkk.jpeg?q=70"
+                        alt="Mouse Image">
                     <div class="section-2-item-head">Gaming Mouse</div>
                     <div class="section-2-item-price">Under ₹599</div>
                     <div class="section-2-item-explore">Explore Now</div>
                 </div>
                 <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/kpft18w0/action-figure/w/l/m/iron-man-pvc-solar-bobble-head-in-standing-position-avenger-red-original-imag3njyfnkyaskf.jpeg?q=70" alt="Toy Image">
+                    <img src="https://rukminim1.flixcart.com/image/400/400/kpft18w0/action-figure/w/l/m/iron-man-pvc-solar-bobble-head-in-standing-position-avenger-red-original-imag3njyfnkyaskf.jpeg?q=70"
+                        alt="Toy Image">
                     <div class="section-2-item-head">Iron Man Toy</div>
                     <div class="section-2-item-price">Under ₹399</div>
                     <div class="section-2-item-explore">Explore Now</div>
                 </div>
                 <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/knoxnrk0/curtain/y/m/z/d-1-door-c-1-rod-pocket-flipkart-smartbuy-original-imag2azekmj26zfb.jpeg?q=70" alt="Curtains Image">
+                    <img src="https://rukminim1.flixcart.com/image/400/400/knoxnrk0/curtain/y/m/z/d-1-door-c-1-rod-pocket-flipkart-smartbuy-original-imag2azekmj26zfb.jpeg?q=70"
+                        alt="Curtains Image">
                     <div class="section-2-item-head">Curtains</div>
                     <div class="section-2-item-price">Under ₹299</div>
                     <div class="section-2-item-explore">Explore Now</div>
                 </div>
                 <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/jn3hocw0/microphone/d/c/e/boya-by-m1-3-5mm-electret-condenser-microphone-with-1-4-adapter-original-imaf9v2jhhakavks.jpeg?q=70" alt="Ear-Headphone Image">
+                    <img src="https://rukminim1.flixcart.com/image/400/400/jn3hocw0/microphone/d/c/e/boya-by-m1-3-5mm-electret-condenser-microphone-with-1-4-adapter-original-imaf9v2jhhakavks.jpeg?q=70"
+                        alt="Ear-Headphone Image">
                     <div class="section-2-item-head">Ear-Headphone</div>
                     <div class="section-2-item-price">Under ₹699</div>
                     <div class="section-2-item-explore">Explore Now</div>
@@ -290,26 +329,47 @@
                     <div class="section-2-item-price">Under ₹3999</div>
                     <div class="section-2-item-explore">Explore Now</div>
                 </div>
+                <div class="left" onclick="MoveLeft(-8)">
+                    <div class="left1">
+                        <svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff"
+                                class="_23HYg_">
+
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="right" onclick="MoveRight(8)">
+                    <div class="right1">
+                        <svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
+                            class="_1xtBwk">
+                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff"
+                                class="_23HYg_">
+
+                            </path>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="adv-img">
             <img src="images/adve.png" alt="Advertiseme Image">
         </div>
     </section>
-  
+
 
     <!-- section 3 -->
     <section class="section-3 container">
         <div class="book-list">
             <div class="music">
-            <div class="books">
-                Books And Music Instruments
+                <div class="books">
+                    Books And Music Instruments
+                </div>
+                <div class="section-3-shopnow">Shop Now</div>
             </div>
-            <div class="section-3-shopnow">Shop Now</div>
-        </div>
             <button>View All</button>
         </div>
-         <div class="section-3-container">
+        <div class="section-3-container">
             <div class="section-3-list">
                 <div class="section-3-item">
                     <img src="images/ghost.jpg" alt="Book Image">

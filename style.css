@@ -492,6 +492,42 @@ code {
     overflow-x: auto;
 }
 
+.left {
+    box-sizing: border-box;
+    background-color: silver;
+    margin-top: 400px;
+    margin-left: 14.5px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+    height: 10%;
+    top: 0;
+    left: 0;
+}
+
+.right {
+    box-sizing: border-box;
+    background-color: silver;
+    margin-right: 378px;
+    margin-top: 400px;
+    padding: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+    height: 10%;
+    top: 0;
+    right: 0;
+}
+
+.right1 svg {
+    rotate: -180deg;
+}
+
 .section-2-item {
     width: 232px;
     height: 90%;
@@ -653,3 +689,4 @@ code {
     font-weight: 300;
     font-size: 12px;
 }
+
