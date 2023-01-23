@@ -17,30 +17,27 @@
 <body onload="startTime()">
 
     <script>
-
-        var firstproducts = 0;
-
-        function MoveRight(right) {
-
-            firstproducts = firstproducts - right;
-
-            console.log("first product ", firstproducts)
-
-            document.getElementById("im").style.transform = `translateX(${firstproducts}px)`;
-
-        }
-
-        function MoveLeft(left) {
-
-            firstproducts = firstproducts + left;
-
-            document.getElementById("im").style.transform = `translateX(${firstproducts}px)`;
-
-        }
+        // Scroll buttons
+         var firstproducts = 0;
+  var secondproducts = 0;
+  function MoveRight(right){
+    var productswidth = document.getElementById('All-Products').scrollWidth;
+    var displaywidth = productswidth-document.getElementsByClassName('products')[0].clientWidth+firstproducts;
+    if(displaywidth>0){
+      firstproducts = firstproducts-right;
+      document.getElementById("All-Products").style.transform = `translateX(${firstproducts}px)`;
+    }
+  }
+  function MoveLeft(left){
+    if(firstproducts<0){
+      firstproducts = firstproducts+left;
+      document.getElementById("All-Products").style.transform = `translateX(${firstproducts}px)`;
+    }
+  }
 
         /*Clock Script*/
         // Set the date we're counting down to
-        var countDownDate = new Date("Jan 20, 2023 23:37:25").getTime();
+        var countDownDate = new Date("Jan 30, 2023 23:37:25").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function () {
@@ -108,6 +105,7 @@
 
                 <div class="dropdown4">
                     <button class="dropbtn4"><b>More</b></button>
+
                     <div class="dropdown-content4">
                         <div class="arrow"></div>
                         <a href="#">Notification Preferences</a>
@@ -250,113 +248,160 @@
         </div>
         </div>
     </section>
-
-    <!-- section 2 -->
-    <section class="section-2 container">
-        <div class="section-2-container">
-            <div class="dealsoftheday">
-                <div class="deals">
-                    Deals Of The Day
-                </div>
-                <code>&#128354</code>
-                <div id="demo" class="clock"></div>
-                <button>View All</button>
+        
+    <!-- section -->
+    <section>
+        <div class="products-ad-block">
+          <div class="product-and-header" id="product-with-ad">
+            <div class="product-header">
+              <div class="dealOfTheData">
+                <h3>Deal Of The Day</h3>
+                <span>
+                  <img src="images/timer.png" style="height: 40px; width: 40px;"/>
+                  <span id="demo"></span>
+                </span>
+              </div>
+              <div class="viewAll">
+                <button class="viewAll-btn">VIEW ALL</button>
+              </div>
             </div>
-            <div class="section-2-list" id="im">
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/l1tmf0w0/stuffed-toy/2/c/q/3-feet-printed-foot-teddy-bear-stuffed-toys-latest-teddy-bear-90-original-imagdazpzwhhvkhu.jpeg?q=70"
-                        alt="Soft Toy Image">
-                    <div class="section-2-item-head">Soft Toy</div>
-                    <div class="section-2-item-price">Under ₹299</div>
-                    <div class="section-2-item-explore">Explore Now</div>
+            <div class="scroll-product">
+                <div class="scroll-left-btn" id="scroll-left">
+                    <button onclick="MoveLeft(232)">
+                      <svg
+                        width="14.6"
+                        height="24"
+                        viewBox="0 0 16 27"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class=""
+                      >
+                        <path
+                          d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                          fill="black"
+                          class="_23HYg_"
+                        ></path>
+                      </svg>
+                    </button>
                 </div>
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/kn0n6a80/remote-control-toy/i/t/l/mini-racing-4-channel-radio-control-rc-car-miss-chief-original-imagfs8264ewfmnw.jpeg?q=70"
-                        alt="Toy Car Image">
-                    <div class="section-2-item-head">Toy Car</div>
-                    <div class="section-2-item-price">Under ₹499</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/l51d30w0/television/1/k/j/-original-imagfsyu8nrz5gzg.jpeg?q=70"
-                        alt="LED TV Image">
-                    <div class="section-2-item-head">LED TV</div>
-                    <div class="section-2-item-price">Under ₹39999</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/khuvxjk0-0/mouse/l/t/6/zeb-transformer-m-zebronics-original-imafxrugfftphbkk.jpeg?q=70"
-                        alt="Mouse Image">
-                    <div class="section-2-item-head">Gaming Mouse</div>
-                    <div class="section-2-item-price">Under ₹599</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/kpft18w0/action-figure/w/l/m/iron-man-pvc-solar-bobble-head-in-standing-position-avenger-red-original-imag3njyfnkyaskf.jpeg?q=70"
-                        alt="Toy Image">
-                    <div class="section-2-item-head">Iron Man Toy</div>
-                    <div class="section-2-item-price">Under ₹399</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/knoxnrk0/curtain/y/m/z/d-1-door-c-1-rod-pocket-flipkart-smartbuy-original-imag2azekmj26zfb.jpeg?q=70"
-                        alt="Curtains Image">
-                    <div class="section-2-item-head">Curtains</div>
-                    <div class="section-2-item-price">Under ₹299</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/jn3hocw0/microphone/d/c/e/boya-by-m1-3-5mm-electret-condenser-microphone-with-1-4-adapter-original-imaf9v2jhhakavks.jpeg?q=70"
-                        alt="Ear-Headphone Image">
-                    <div class="section-2-item-head">Ear-Headphone</div>
-                    <div class="section-2-item-price">Under ₹699</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="section-2-item">
-                    <img src="images/Monitor.jpg" alt="Monitor Image">
-                    <div class="section-2-item-head">Monitor</div>
-                    <div class="section-2-item-price">Under ₹12999</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="section-2-item">
-                    <img src="images/powerbank.jpg" alt="Power Bank Image">
-                    <div class="section-2-item-head">Power Bank</div>
-                    <div class="section-2-item-price">Under ₹2999</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="section-2-item">
-                    <img src="images/Printer.png" alt="Printer Image">
-                    <div class="section-2-item-head">Printer</div>
-                    <div class="section-2-item-price">Under ₹3999</div>
-                    <div class="section-2-item-explore">Explore Now</div>
-                </div>
-                <div class="left" onclick="MoveLeft(-8)">
-                    <div class="left1">
-                        <svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff"
-                                class="_23HYg_">
-
-                            </path>
-                        </svg>
+              <div class="products">
+                <div class="all-products" id="All-Products">
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img  class="All-Images" alt="Soft Toy"
+                        src="https://rukminim1.flixcart.com/image/400/400/l1tmf0w0/stuffed-toy/2/c/q/3-feet-printed-foot-teddy-bear-stuffed-toys-latest-teddy-bear-90-original-imagdazpzwhhvkhu.jpeg?q=70" />
                     </div>
-                </div>
-                <div class="right" onclick="MoveRight(8)">
-                    <div class="right1">
-                        <svg width="14.6" height="24" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg"
-                            class="_1xtBwk">
-                            <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff"
-                                class="_23HYg_">
-
-                            </path>
-                        </svg>
+                    <div class="product-name">Soft Toy</div>
+                    <div class="product-price">Under ₹299</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img  class="All-Images" alt="Toy Car"
+                        src="https://rukminim1.flixcart.com/image/400/400/kn0n6a80/remote-control-toy/i/t/l/mini-racing-4-channel-radio-control-rc-car-miss-chief-original-imagfs8264ewfmnw.jpeg?q=70" />
                     </div>
+    
+                    <div class="product-name">Toy Car</div>
+                    <div class="product-price">Under ₹499</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img  class="All-Images" alt="LED TV image"
+                        src="https://rukminim1.flixcart.com/image/400/400/l51d30w0/television/1/k/j/-original-imagfsyu8nrz5gzg.jpeg?q=70" />
+                    </div>
+                    <div class="product-name">LED TV</div>
+                    <div class="product-price">From ₹39999</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img class="All-Images" alt="Gaming Mouse"
+                        src="https://rukminim1.flixcart.com/image/400/400/khuvxjk0-0/mouse/l/t/6/zeb-transformer-m-zebronics-original-imafxrugfftphbkk.jpeg?q=70" />
+                    </div>
+                    <div class="product-name">Gaming Mouse</div>
+                    <div class="product-price">Under ₹899</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img  class="All-Images" alt="toy image"
+                        src="https://rukminim1.flixcart.com/image/400/400/kpft18w0/action-figure/w/l/m/iron-man-pvc-solar-bobble-head-in-standing-position-avenger-red-original-imag3njyfnkyaskf.jpeg?q=70" />
+                    </div>
+                    <div class="product-name">Iron Man Toy</div>
+                    <div class="product-price">Under ₹399</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img class="All-Images" alt="Curtain image"
+                        src="https://rukminim1.flixcart.com/image/400/400/knoxnrk0/curtain/y/m/z/d-1-door-c-1-rod-pocket-flipkart-smartbuy-original-imag2azekmj26zfb.jpeg?q=70" />
+                    </div>
+                    <div class="product-name">Curtains</div>
+                    <div class="product-price">Under ₹299</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img  class="All-Images" alt="Ear-Headphone image"
+                        src="https://rukminim1.flixcart.com/image/400/400/jn3hocw0/microphone/d/c/e/boya-by-m1-3-5mm-electret-condenser-microphone-with-1-4-adapter-original-imaf9v2jhhakavks.jpeg?q=70" />
+                    </div>
+                    <div class="product-name">Ear-Headphone</div>
+                    <div class="product-price">Under ₹699</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img  class="All-Images" 
+                        src="images/Monitor.jpg" alt="Monitor Image" />
+                    </div>
+                    <div class="product-name">Monitors</div>
+                    <div class="product-price">Under ₹12999</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img class="All-Images"
+                        src="images/powerbank.jpg" alt="Power Bank Image"" />
+                    </div>
+                    <div class="product-name">Power Bank</div>
+                    <div class="product-price">Under ₹2999</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
+                  <div class="product-item">
+                    <div class="product-img">
+                      <img  class="All-Images" 
+                        src="images/Printer.png" alt="Printer Image"" />
+                    </div>
+                    <div class="product-name">Printer</div>
+                    <div class="product-price">Under ₹3999</div>
+                    <div class="product-Explore">Explore Now</div>
+                  </div>
                 </div>
+              </div>
+              <div class="scroll-right-btn" id="scroll-right">
+                <button onclick="MoveRight(232)" >
+                  <svg
+                    width="14.6"
+                    height="24"
+                    viewBox="0 0 16 27"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class=""
+                  >
+                    <path
+                      d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
+                      fill="black"
+                      class="_23HYg_"
+                    ></path>
+                  </svg>
+                </button>
             </div>
+            </div>
+          </div>
+          <div class="advertizement">
+            <img src="images/adve.png" alt="advertizement" />
+          </div>
         </div>
-        <div class="adv-img">
-            <img src="images/adve.png" alt="Advertiseme Image">
-        </div>
-    </section>
+      </section>
 
 
     <!-- section 3 -->
